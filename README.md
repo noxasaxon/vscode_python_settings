@@ -1,22 +1,22 @@
 # vscode_python_settings
 setting up vscode for (opinionated) optimal python development
 
+## Installing VSCode extensions for python analysis
+
+Paste the following into your `Extensions` search bar in vscode and install these official Microsoft extensions
+
+- [ ] `ms-python.python`
+- [ ] `ms-python.vscode-pylance`
+
 ## Installing python dependencies for the IDE
 
 These will need to be installed in the python environment that vscode will use (you can view/change environments in vscode by clicking it in the bottom bar, or with `CMD + Shift + P` and typing `interpreter`.
 
+To open your terminal, type ``` CMD + ` ```
+
 ```shell
-pip install black
-pip install flake8
-pip install flake8-bugbear
+pip install black flake8 flake8-bugbear
 ```
-
-## Installing VSCode extensions for python analysis
-
-Pastee the following into your `Extensions` search bar in vscode and install these official Microsoft extensions
-
-- [ ] `ms-python.python`
-- [ ] `ms-python.vscode-pylance`
 
 ## Setting up your VSCode settings
 
