@@ -53,3 +53,15 @@ Once in the global VSCode json settings, paste the following:
 - `oderwat.indent-rainbow` : uses a different color for each set of indentation (useful for python whitespace) 
 - `aaron-bond.better-comments` : Will highlight usages of `NOTE:` `FIX:` `TODO:` in your code comments
 - `zhuangtongfa.material-theme` : Not all themes make use of ALL the syntax features exposed by PyLance, this is one of the best that makes use of all its features
+
+## Restrict analyzer to specific files
+
+The VSCode python settings.json allow you to toggle between 2 analysis settings: the default is all workspace files or you can set it to only opened files.
+
+It is super useful for scanning all files in the explorer tree and seeing if files are red without having to open them, so the default setting is great. This _might_ cause performance issues during build commands that generate large amounts of files (which pylance will then try to analyze), so you can [specify which file paths you want to include or exclude.](https://github.com/microsoft/pyright/blob/main/docs/configuration.md#main-pyright-config-options)
+
+If your workspace/repo has a `pyproject.toml` file, [you can put pyright (python analyzer) configs there instead](https://github.com/microsoft/pyright/blob/main/docs/configuration.md#sample-pyprojecttoml-file):
+```toml
+[tool.pyright]
+ignore = ["./build", "./.serverless", "./.tox"]
+```
